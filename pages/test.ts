@@ -1,1 +1,0 @@
-export const datas = {name:"ant", age: 22}
