@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={manrope.className}>
-        <h1 className={lora.className}>Title ok?</h1>
+        <h1 className={lora.className}>Title ok? this is a test</h1>
 
         className={manrope.className}
 
