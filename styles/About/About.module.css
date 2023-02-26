@@ -11,17 +11,33 @@
   justify-content: space-between;
 }
 
-.intro,
-.mission,
-.services {
+.section {
   width: 100%;
   margin-bottom: 50px;
 }
 
-@media (min-width: 768px) {
-  .intro,
-  .mission,
-  .services {
-    width: calc(33.33% - 20px);
-  }
+.intro {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.intro h2 {
+  text-align: center;
+}
+
+.intro img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.heroContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.heroImg {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
