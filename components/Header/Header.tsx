@@ -19,7 +19,9 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>Logo</div>
+      <div className={styles.logo}>
+        <img src="/lgo-c.png" alt="SWI Logo" />
+      </div>
       <nav className={`${styles.nav} ${showMenu ? styles.show : ''}`}>
         <ul className={styles.menu}>
           {links.map((link, index) => (
@@ -29,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
           ))}
         </ul>
       </nav>
-      <button className={styles.menuButton} onClick={handleMenuClick}>
+      <button className={`${styles.menuButton} ${showMenu ? styles.open : ''}`} onClick={handleMenuClick}>
         {showMenu ? "Close" : "Menu"}
       </button>
     </header>
