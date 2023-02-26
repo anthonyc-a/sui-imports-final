@@ -4,9 +4,6 @@ import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import Head from "next/head";
 
-import { Lora } from '@next/font/google'
-const lora = Lora({ subsets: ['latin'] })
-
 const App = () => {
 
   return (
@@ -18,7 +15,7 @@ const App = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header links={[{text: "Home", url:"/"}, {text: "Portolio", url:"/portfolio"}]} />
-      <Hero fonts={lora} />
+      <Hero />
       <About />
     </div>
   );
