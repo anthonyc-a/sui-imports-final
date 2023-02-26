@@ -1,0 +1,27 @@
+.about {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.intro,
+.mission,
+.services {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .intro,
+  .mission,
+  .services {
+    width: calc(33.33% - 20px);
+  }
+}

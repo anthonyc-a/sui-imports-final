@@ -30,12 +30,8 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
         </ul>
       </nav>
       <button className={styles.menuButton} onClick={handleMenuClick}>
-        Menu
+        {showMenu ? "Close" : "Menu"}
       </button>
-      {showMenu &&
-      <button className={styles.closeBtn} onClick={handleMenuClick}>Close</button>
-    }
-
     </header>
   );
 };
