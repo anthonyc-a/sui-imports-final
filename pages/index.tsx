@@ -6,7 +6,7 @@ import About from "../components/About/About";
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      <Header />
+      <Header links={[{text: "Home", url:"/"}]} />
       <Hero />
       <About />
     </div>

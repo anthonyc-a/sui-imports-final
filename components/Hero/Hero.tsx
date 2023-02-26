@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react';
+import styles from '../../styles/Hero/Hero.module.css';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
-    <section className="hero">
+    <section className={styles.hero}>
       <h1>Welcome</h1>
     </section>
   );
