@@ -4,10 +4,11 @@ import Head from "next/head";
 const App = () => {
 
   return (
-    <div className="landing-page">
+    <div>
       <Head>
         <title>SUI Wine Imports - Home</title>
       </Head>
+
     </div>
   );
 };
