@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 320px;
+}
+
+.inactive {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.form input {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 1rem;
+  padding: 8px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #454545;
+  font-family: "Manrope", sans-serif;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #eee;
+  border-radius: unset;
+}
+
+.form button {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 1rem;
+}

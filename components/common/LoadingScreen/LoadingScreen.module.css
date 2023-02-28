@@ -1,0 +1,31 @@
+.loadingScreen {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.loadingScreen h2 {
+  margin-bottom: 2px;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+.loadingScreen h2 span {
+  color: #beaa82;
+}
+
+.loadingScreen .loading {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  opacity: 0.5;
+}

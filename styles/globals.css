@@ -20,7 +20,7 @@ body {
 }
 
 body {
-  color: #505050;
+  color: #454545;
 }
 
 a {
@@ -32,19 +32,24 @@ h1,
 h2,
 h3 {
   font-family: "Lora", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   padding-bottom: 8px;
 }
 
 h1 {
-  margin-bottom: 2rem;
-  font-size: 36px;
-  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 20px;
+  font-size: 32px;
+  border-bottom: 1px solid #beaa82;
+}
+
+h1 span {
+  color: #beaa82;
 }
 
 h2 {
-  margin-bottom: 8px;
-  border-bottom: 1px solid #beaa82;
+  margin-bottom: 1rem;
+  font-size: 24px;
 }
 
 p {
@@ -65,9 +70,9 @@ button {
   padding: 8px 32px;
   background: #beaa82;
   color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  transition: .2s ease-in-out;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -79,6 +84,19 @@ button:hover {
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 120px 2rem;
-  min-height: 150vh;
+  padding: 120px 2rem 0 2rem;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 780px) {
+  h1 {
+    font-size: 30px;
+  }
+  .container {
+    padding: 120px 20px 0 20px;
+  }
+}
+
+.modal-open {
+  overflow: hidden !important;
 }
