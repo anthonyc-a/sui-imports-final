@@ -111,7 +111,6 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        min-height: stretch;
         opacity: 0;
         transition: .2s ease-in-out;
         margin-left: unset;
@@ -125,7 +124,7 @@
 
     .header nav ul {
         flex-direction: column;
-        padding-right: 50%;
+        padding-right: 2rem;
     }
 
     .header nav ul li {
