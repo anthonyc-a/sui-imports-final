@@ -12,3 +12,9 @@
     height: 0;
     background-color: #beaa82;
 }
+
+@media (max-width: 720px) {
+    .scrollbar {
+        display: none;
+    }
+}

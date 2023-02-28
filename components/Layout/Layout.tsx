@@ -50,8 +50,8 @@ const Layout = ({ children, title = 'Next.js App' }: Props) => {
                             </Link>
                         </li>
                     </ul>
-                    <button>Contact</button>
                 </nav>
+                <button>Contact</button>
                 <div className={styles.menuBtn} onClick={()=>{
                     setMenuOpen(!menuOpen)
                 }}>
