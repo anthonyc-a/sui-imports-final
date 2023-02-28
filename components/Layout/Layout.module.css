@@ -14,7 +14,7 @@
 }
 
 .header .logo {
-    height: 44px;
+    height: 40px;
 }
 
 .header .logo img {
@@ -39,7 +39,7 @@
     margin-right: 2rem;
     font-family: "Lora", sans-serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .header nav ul li:nth-last-child(1) {
