@@ -7,7 +7,7 @@ export default function Document() {
       <meta name="description" content="SUI Wine Imports Official Website" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       <link rel="icon" href="/lgo-c.ico" />
-      <meta name="theme-color" content="#beaa82" />
+      <meta name="theme-color" content="#ffffff" />
       <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap"
         rel="stylesheet"

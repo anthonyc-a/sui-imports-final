@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import React from 'react'
 import Heading from '../components/common/Heading/Heading'
 import VinesOne from '../components/common/Illustrations/VinesOne'

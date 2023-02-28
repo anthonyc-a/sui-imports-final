@@ -36,6 +36,7 @@
 
 .header nav ul:hover > .active::before {
     opacity: 0;
+    transform: translateY(4px);
 }
 
 .header nav ul li {
