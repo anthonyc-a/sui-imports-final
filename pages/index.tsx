@@ -1,7 +1,6 @@
 import React from "react";
 import Heading from "../components/common/Heading/Heading";
 import Layout from "../components/Layout/Layout";
-import VinesOne from "../components/common/Illustrations/VinesOne";
 import VinesTwo from "../components/common/Illustrations/VinesTwo";
 
 const App = () => {

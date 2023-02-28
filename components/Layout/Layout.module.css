@@ -34,11 +34,14 @@
     margin-right: 40px;
 }
 
+.header nav ul:hover > .active::before {
+    opacity: 0;
+}
+
 .header nav ul li {
     position: relative;
     margin-right: 2rem;
-    font-family: "Lora", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -83,6 +86,7 @@
     transform: translateX(-50%);
     background-color: #beaa82;
     border-radius: 100%;
+    transition: .2s ease-in-out;
 }
 
 .footer {
