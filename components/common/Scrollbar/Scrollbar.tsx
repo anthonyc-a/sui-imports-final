@@ -26,7 +26,7 @@ const Scrollbar = () => {
         <div className={styles.scrollbar}>
             <div
                 className={styles.scrollbarInner}
-                style={{ width: `${scrollTop}%` }}
+                style={{ height: `${scrollTop}%` }}
             ></div>
         </div>
     )

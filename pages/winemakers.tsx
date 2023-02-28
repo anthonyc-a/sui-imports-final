@@ -6,7 +6,7 @@ import Layout from '../components/Layout/Layout'
 const Winemakers = () => {
     return (
         <div className='container'>
-            <Layout title="About">
+            <Layout title="History & Winemakers">
                 <h1>History & Winemakers</h1>
                 <Heading text="Our Partners" />
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium rem eos quibusdam eius magni aut itaque officiis voluptate dolorem nisi!</p>

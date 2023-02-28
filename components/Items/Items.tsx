@@ -35,7 +35,6 @@ const Items = ({ addToCart }: any) => {
   
     return (
       <>
-        <h5 className="heading">Neyroud</h5>
       </>
     );
   };

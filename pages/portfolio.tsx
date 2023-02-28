@@ -7,7 +7,7 @@ import Layout from '../components/Layout/Layout'
 const Portfolio = () => {
   return (
     <div className='container'>
-      <Layout title="Home Page">
+      <Layout title="Portfolio">
         <h1>SUI Wine Imports Limited.</h1>
         <Heading text="This is a Heading" />
         <p>This is the home page.</p>

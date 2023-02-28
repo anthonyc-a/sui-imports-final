@@ -15,9 +15,8 @@
 }
 .vinesTwo {
     position: absolute;
-    top: 50%;
+    top: 80px;
     right: -120px;
-    transform: translateY(-50%);
     width: 400px;
     height: 400px;
     opacity: 0.3;

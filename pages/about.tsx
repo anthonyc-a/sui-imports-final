@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/common/Heading/Heading'
 import VinesOne from '../components/common/Illustrations/VinesOne'
+import VinesTwo from '../components/common/Illustrations/VinesTwo'
 import Layout from '../components/Layout/Layout'
 
 const About = () => {
@@ -12,6 +13,7 @@ const About = () => {
         <p>This is the home page.</p>
       </Layout>
       <VinesOne/>
+      <VinesTwo/>
     </div>
   )
 }
