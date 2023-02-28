@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Scrollbar from '../common/Scrollbar/Scrollbar';
 
 import styles from './Layout.module.css';
+import Contact from '../common/Modals/Contact/Contact';
 
 type Props = {
     children: ReactNode;
@@ -15,6 +16,7 @@ const Layout = ({ children, title = 'Next.js App' }: Props) => {
     const router = useRouter();
 
     const [menuOpen, setMenuOpen] = useState(false)
+    const [contactOpen, setContactOpen] = useState(false)
 
     return (
         <div className={styles.container}>
@@ -51,8 +53,14 @@ const Layout = ({ children, title = 'Next.js App' }: Props) => {
                         </li>
                     </ul>
                 </nav>
-                <button>Contact</button>
-                <div className={styles.menuBtn} onClick={()=>{
+                <button onClick={() => {
+                    setMenuOpen(false)
+                    setContactOpen(true)
+                }}>Contact</button>
+                {contactOpen &&
+                    <Contact contactOpen={contactOpen} setContactOpen={setContactOpen} />
+                }
+                <div className={styles.menuBtn} onClick={() => {
                     setMenuOpen(!menuOpen)
                 }}>
                     {menuOpen ? "Close" : "Menu"}
