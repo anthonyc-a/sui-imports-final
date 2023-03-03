@@ -32,10 +32,10 @@
   margin-top: 1rem;
 }
 
-p {
+.disclaimer {
   margin-bottom: 2rem;
 }
 
-p a {
+.disclaimer a {
   text-decoration: underline;
 }
