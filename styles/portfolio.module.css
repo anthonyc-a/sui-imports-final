@@ -33,9 +33,9 @@
 }
 
 .disclaimer {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
-.disclaimer a {
+.disclaimer strong {
   text-decoration: underline;
 }
