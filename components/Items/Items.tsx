@@ -26,8 +26,8 @@ interface ItemProps {
     price: number;
     winemaker: string;
     type: string;
+    i: any;
   };
-  i: number;
 }
 
 interface ItemsProps {
