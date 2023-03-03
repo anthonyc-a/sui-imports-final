@@ -268,7 +268,7 @@ const Winemakers = () => {
           </div>
           <div className={styles["about-image"]}>
             <Image
-              src="/jean-marc.jpg"
+              src="/sordet.jpg"
               alt="Placeholder image"
               width={500}
               height={500}
