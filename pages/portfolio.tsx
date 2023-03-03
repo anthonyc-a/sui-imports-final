@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Cart from "../components/Cart/Cart";
 import VinesOne from "../components/common/Illustrations/VinesOne";
 import VinesTwo from "../components/common/Illustrations/VinesTwo";
 import Items from "../components/Items/Items";
@@ -23,8 +24,9 @@ const Portfolio = () => {
   const passwordRef = useRef();
 
   const [cart, setCart] = useState<CartItem[]>([]);
+  console.log(cart);
 
-  const addToCart = (item: CartItem, e: any) => {
+  const addToCart = (item: CartItem) => {
     setCart([...cart, item]);
   };
 
@@ -54,8 +56,17 @@ const Portfolio = () => {
           <h1>
             Our <span>Selection</span>{" "}
           </h1>
+          <h3
+            className={styles.cartBtn}
+            onClick={() => {
+              setShowCart(true);
+            }}
+          >
+            Cart ({cart.length})
+          </h3>
 
           <Items addToCart={addToCart} removeFromCart={removeFromCart} />
+          {showCart && <Cart cart={cart} setShowCart={setShowCart} />}
         </Layout>
         <VinesOne />
         <VinesTwo />
@@ -82,11 +93,11 @@ const Portfolio = () => {
           <p className={styles.disclaimer}>
             No sign in credentials?{" "}
             <strong>
-              <a href="mailto:hello@mail.com">Contact us</a>
+              <a href="mailto:sui-wineimports@protonmail.com">Contact us</a>
             </strong>{" "}
             if you wish to partner and order from our exclusive wine portolio.
             Our team will respond to your message and send you the login
-            information
+            information.
           </p>
         </Layout>
         <VinesOne />

@@ -39,3 +39,8 @@
 .disclaimer strong {
   text-decoration: underline;
 }
+
+.cartBtn {
+  width: fit-content;
+  padding-top: 1rem;
+}

@@ -160,33 +160,15 @@ const Layout = ({
               </ul>
               {menuOpen && <VinesThree />}
             </nav>
-            <button
-              onClick={() => {
-                setMenuOpen(false);
-                setContactOpen(true);
-              }}
-            >
-              Contact
-            </button>
+            <a href="mailto:sui-wineimports@protonmail.com">
+              <button>Contact</button>
+            </a>
             {contactOpen && (
               <Contact
                 contactOpen={contactOpen}
                 setContactOpen={setContactOpen}
               />
             )}
-            {router.pathname === "/portfolio" && (
-              <div
-                className={styles.cartBtn}
-                onClick={() => {
-                  setShowCart(true);
-                }}
-              >
-                Cart ({cart.length})
-              </div>
-            )}
-
-            {showCart && <Cart />}
-
             <div
               className={styles.menuBtn}
               onClick={() => {

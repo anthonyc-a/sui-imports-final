@@ -282,8 +282,6 @@ const ItemsAll = () => {
       .catch(console.error);
   }, []);
 
-  console.log(items);
-
   return (
     <>
       <Items items={items} />
