@@ -79,7 +79,7 @@ const Portfolio = () => {
             <input type="password" placeholder="Password" ref={passwordRef} />
             <button onClick={handleSignIn}>Submit</button>
           </form>
-          <p>No sign in credentials? <a href="mailto:hello@mail.com">Contact us</a> if you wish to partner and order from our exclusive wine portolio. Our team will respond to your message and send you the login information</p>
+          <p>No sign in credentials? <strong><a href="mailto:hello@mail.com">Contact us</a></strong> if you wish to partner and order from our exclusive wine portolio. Our team will respond to your message and send you the login information</p>
         </Layout>
         <VinesOne />
         <VinesTwo />
