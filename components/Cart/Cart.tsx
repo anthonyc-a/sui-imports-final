@@ -30,20 +30,7 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
 
     if (cart.length > 0) {
       emailjs
-        .send(
-          "service_3f9w4k3",
-          "template_niyn4bz",
-          {
-            message: cartData,
-            first: firstNameRef.current && firstNameRef.current?.value,
-            last: lastNameRef.current && lastNameRef.current?.value,
-            company: companyRef.current && companyRef.current?.value,
-            email: emailRef.current && emailRef.current?.value,
-            number: numberRef.current && numberRef.current?.value,
-            total: orderTotal,
-          },
-          "6wX2WN7sKCF7DMK3x"
-        )
+        .send("service_3f9w4k3", "template_niyn4bz", {}, "6wX2WN7sKCF7DMK3x")
         .then((response) => {
           console.log("Email successfully sent!", response);
         })
