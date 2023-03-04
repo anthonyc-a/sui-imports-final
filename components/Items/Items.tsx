@@ -65,6 +65,8 @@ const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
                     image={item.fields.productImage}
                     price={item.fields.price}
                     maker={item.fields.winemaker}
+                    description={""}
+                    details={""}
                   />
                 </div>
                 {showDetails && (
