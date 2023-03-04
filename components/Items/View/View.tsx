@@ -1,5 +1,4 @@
 import React from "react";
-import VinesOne from "../../common/Illustrations/VinesOne";
 
 import styles from "../Items.module.css";
 
@@ -77,7 +76,6 @@ const View: React.FC<ItemProps> = ({
               price: price.toFixed(2),
               quantity: quantity,
               image: image,
-              maker: maker,
             }),
           ]}
         >

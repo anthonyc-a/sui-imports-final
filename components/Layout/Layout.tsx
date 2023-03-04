@@ -8,7 +8,6 @@ import VinesThree from "../common/Illustrations/VinesThree";
 
 import styles from "./Layout.module.css";
 import LoadingScreen from "../common/LoadingScreen/LoadingScreen";
-import Cart from "../common/Modals/Cart/Cart";
 
 type Props = {
   children: ReactNode;

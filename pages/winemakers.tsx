@@ -69,6 +69,78 @@ const Winemakers = () => {
             </p>
           </div>
         </div>
+        <Heading text="Background & Culture" />
+
+        <div className={styles["about-content"]}>
+          <div className={styles["about-image"]}>
+            <Image
+              src="/fv.jpg"
+              alt="Placeholder image"
+              width={500}
+              height={500}
+            />
+          </div>
+          <div className={styles["about-description"]}>
+            <h2 className={styles["about-subheader"]}>Fête des Vignerons</h2>
+            <p>
+              How can we mention the Lavaux without the famously known
+              &quot;Fête des Vignerons&quot; hosted in Vevey without which, the
+              history and culture of Lavaux would not be complete.
+            </p>
+            <p>
+              Organised by the “Confrérie des Vignerons”, this unique
+              celebration takes place once every two decades in Vevey, a town
+              located in the heart of the Lavaux vineyards in the canton of
+              Vaud, Switzerland.
+            </p>
+            <p>
+              The Winegrowers&apos; Festival pays tribute to the centuries-old
+              winegrowing traditions of an entire region through a show and the
+              crowning of the winegrower-crafters.
+            </p>
+            <p>
+              The first Fête des Vignerons in 1797 used wooden stands with a
+              capacity of less than 2000 seats. The 2019 open-air arena had a
+              seating capacity of 20,000 and 30 metres high towers.
+            </p>
+          </div>
+        </div>
+        <div className={styles["about-content"]}>
+          <div className={styles["about-description"]}>
+            <h2 className={styles["about-subheader"]}>
+              Swiss Wine Awards by VINEA
+            </h2>
+            <p>
+              The Grand Prix du Vin Suisse aims to promote the quality of Swiss
+              wines. The aim of the “GPVS” is to highlight the quality of Swiss
+              wines and to support the efforts of the Swiss wine industry to
+              meet the requirements of the national and international wine
+              market.
+            </p>
+            <p>
+              All Swiss wine producers have the opportunity to participate in
+              this competition.
+            </p>
+            <p>
+              The wines are divided into different categories and assessed in a
+              professional and neutral tasting.
+            </p>
+            <p>
+              The Swiss Association of Enologists (SAEO) is the patron of the
+              competition.
+            </p>
+          </div>
+          <div className={styles["about-image"]}>
+            <Image
+              src="/awards.jpg"
+              alt="Placeholder image"
+              width={500}
+              height={500}
+            />
+          </div>
+        </div>
+        <Heading text="Winemakers" />
+
         <div className={styles["about-content"]}>
           <div className={styles["about-description"]}>
             <h2 className={styles["about-subheader"]}>Neyroud-Fonjallaz</h2>

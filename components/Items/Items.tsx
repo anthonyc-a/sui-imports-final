@@ -24,16 +24,18 @@ interface ItemProps {
     description: string;
     details: any;
     price: number;
+    awards: string;
+    wineType: string;
+    productDescription: string;
     winemaker: string;
     type: string;
+    i: number;
   };
-  i: number;
 }
 
 interface ItemsProps {
   items: ItemProps[];
   addToCart: any;
-  removeFromCart: any;
 }
 
 const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
@@ -63,7 +65,6 @@ const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
                     image={item.fields.productImage}
                     price={item.fields.price}
                     maker={item.fields.winemaker}
-                    i={i}
                   />
                 </div>
                 {showDetails && (
@@ -270,7 +271,7 @@ const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
   );
 };
 
-const ItemsAll = () => {
+const ItemsAll = (addToCart: any) => {
   const [items, setItems] = React.useState<ItemProps[]>([]);
 
   React.useEffect(() => {
@@ -284,7 +285,7 @@ const ItemsAll = () => {
 
   return (
     <>
-      <Items items={items} />
+      <Items items={items} addToCart={addToCart} />
     </>
   );
 };

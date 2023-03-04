@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Cart from "../components/Cart/Cart";
 import VinesOne from "../components/common/Illustrations/VinesOne";
 import VinesTwo from "../components/common/Illustrations/VinesTwo";
-import Items from "../components/Items/Items";
+import ItemsAll from "../components/Items/Items";
 import Layout from "../components/Layout/Layout";
 
 import styles from "../styles/portfolio.module.css";
@@ -17,8 +17,6 @@ interface CartItem {
 const Portfolio = () => {
   const [signedIn, setSignedIn] = useState(false);
   const [showCart, setShowCart] = useState(false);
-
-  const [passRef, setPassRef] = useState("");
 
   const userRef = useRef();
   const passwordRef = useRef();
@@ -39,10 +37,6 @@ const Portfolio = () => {
       setSignedIn(true);
     } else null;
   };
-
-  useEffect(() => {
-    setPassRef(passwordRef.current);
-  }, [passwordRef]);
 
   if (signedIn === true)
     return (
@@ -65,8 +59,14 @@ const Portfolio = () => {
             Cart ({cart.length})
           </h3>
 
-          <Items addToCart={addToCart} removeFromCart={removeFromCart} />
-          {showCart && <Cart cart={cart} setShowCart={setShowCart} />}
+          <ItemsAll addToCart={addToCart} />
+          {showCart && (
+            <Cart
+              cart={cart}
+              setShowCart={setShowCart}
+              removeFromCart={removeFromCart}
+            />
+          )}
         </Layout>
         <VinesOne />
         <VinesTwo />
