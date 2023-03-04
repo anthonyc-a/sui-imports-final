@@ -72,7 +72,7 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
         <>
           {cart.map((item: any, index: any) => (
             <li key={index}>
-              <img src={item.image.fields.file.url} alt={name} />
+              <img src={item.image.fields.file.url} alt={"Item Image"} />
               <div>
                 {item.name} (x {item.quantity})
               </div>
