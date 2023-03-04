@@ -18,33 +18,6 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
 
   const orderTotal = `£${total}`;
 
-  const sendCartData = () => {
-    const cartData = cart
-      .map(
-        (item: any) =>
-          `${item.name} x ${item.quantity * 6}), £${
-            item.quantity * 6 * item.price
-          }`
-      )
-      .join("\n");
-
-    if (cart.length > 0) {
-      emailjs
-        .send("service_3f9w4k3", "template_niyn4bz", {}, "6wX2WN7sKCF7DMK3x")
-        .then((response) => {
-          console.log("Email successfully sent!", response);
-        })
-        .then(() => {
-          window.location.reload();
-        })
-        .catch((error) => {
-          console.log("An error occurred while sending the email.", error);
-        });
-    } else {
-      console.log("Cart is empty");
-    }
-  };
-
   return (
     <div className={styles.cart}>
       <h1>
@@ -82,9 +55,7 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
         <input type="text" placeholder="Contact Number" ref={numberRef} />
         <h2>Order Total: £{total}</h2>
 
-        <button className="form-button" onClick={sendCartData}>
-          Place Order
-        </button>
+        <button className="form-button">Place Order</button>
       </form>
       <div
         className={styles.closeBtn}
