@@ -35,11 +35,11 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
           "template_niyn4bz",
           {
             message: cartData,
-            first: firstNameRef.current.value,
-            last: lastNameRef.current.value,
-            company: companyRef.current.value,
-            email: emailRef.current.value,
-            number: numberRef.current.value,
+            first: firstNameRef.current?.value,
+            last: lastNameRef.current?.value,
+            company: companyRef.current?.value,
+            email: emailRef.current?.value,
+            number: numberRef.current?.value,
             total: orderTotal,
           },
           "6wX2WN7sKCF7DMK3x"
