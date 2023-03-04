@@ -51,50 +51,6 @@ const Layout = ({
   }, [menuOpen]);
 
   useEffect(() => {
-    const handleTouchMove = (event: any) => {
-      event.preventDefault();
-    };
-
-    if (menuOpen) {
-      document.body.addEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    } else {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    }
-
-    return () => {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    };
-  }, [menuOpen]);
-
-  useEffect(() => {
-    const handleTouchMove = (event: any) => {
-      event.preventDefault();
-    };
-
-    if (contactOpen) {
-      document.body.addEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    } else {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    }
-
-    return () => {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    };
-  }, [contactOpen]);
-
-  useEffect(() => {
     if (contactOpen) {
       document.body.classList.add("modal-open");
     } else {
