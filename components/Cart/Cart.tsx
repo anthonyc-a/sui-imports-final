@@ -4,11 +4,11 @@ import emailjs from "emailjs-com";
 import styles from "./Cart.module.css";
 
 const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
-  const firstNameRef = React.useRef(null);
-  const lastNameRef = React.useRef(null);
-  const companyRef = React.useRef(null);
-  const emailRef = React.useRef(null);
-  const numberRef = React.useRef(null);
+  const firstNameRef = React.useRef<any>(null);
+  const lastNameRef = React.useRef<any>(null);
+  const companyRef = React.useRef<any>(null);
+  const emailRef = React.useRef<any>(null);
+  const numberRef = React.useRef<any>(null);
 
   let total: number = 0;
 
