@@ -18,6 +18,14 @@ const Portfolio = () => {
   const [signedIn, setSignedIn] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
+  useEffect(() => {
+    if (showCart) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  }, [showCart]);
+
   const userRef = useRef();
   const passwordRef = useRef();
 
@@ -38,7 +46,7 @@ const Portfolio = () => {
     } else null;
   };
 
-  if (signedIn === true)
+  if (signedIn === true) {
     return (
       <div className="container">
         <Layout
@@ -59,7 +67,7 @@ const Portfolio = () => {
             Cart ({cart.length})
           </h3>
 
-          <ItemsAll addToCart={addToCart} />
+          <ItemsAll cart={cart} addToCart={addToCart} />
           {showCart && (
             <Cart
               cart={cart}
@@ -72,7 +80,9 @@ const Portfolio = () => {
         <VinesTwo />
       </div>
     );
-  if (signedIn === false)
+  }
+
+  if (signedIn === false) {
     return (
       <div className="container">
         <Layout
@@ -104,6 +114,7 @@ const Portfolio = () => {
         <VinesTwo />
       </div>
     );
+  }
 };
 
 export default Portfolio;

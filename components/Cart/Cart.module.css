@@ -6,7 +6,31 @@
   height: 100vh;
   padding: 20px;
   padding-top: 120px;
+  padding-bottom: 5rem;
   background-color: #fff;
+  overflow: scroll;
+}
+
+.cart ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+}
+
+.cart ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cart ul li button {
+  margin-top: 20px;
 }
 
 .closeBtn {
@@ -22,7 +46,8 @@
   flex-direction: column;
   justify-content: center;
   min-height: 320px;
-  margin-top: 40px;
+  max-width: 480px;
+  margin: 40px auto;
 }
 
 .inactive {
@@ -53,4 +78,8 @@
   width: 100%;
   max-width: 480px;
   margin-top: 1rem;
+}
+
+.cart ul li img {
+  max-height: 180px;
 }

@@ -17,6 +17,7 @@ interface ItemProps {
   maker: string;
   awards: string;
   addToCart: any;
+  cart: any;
   type: string;
   i: number;
 }
@@ -29,11 +30,23 @@ const View: React.FC<ItemProps> = ({
   type,
   description,
   awards,
+  cart,
   addToCart,
   details,
 }) => {
   const [quantity, setQuantity] = React.useState(1);
-  console.log(addToCart);
+  console.log(cart);
+
+  const handleClick = () => {
+    details(false);
+    addToCart({
+      name: name,
+      price: price,
+      quantity: quantity,
+      image: image,
+    });
+    console.log(cart);
+  };
 
   return (
     <div className={styles.view}>
@@ -69,19 +82,7 @@ const View: React.FC<ItemProps> = ({
             +
           </button>
         </div>
-        <button
-          onClick={() => [
-            details(false),
-            addToCart({
-              name: name,
-              price: price.toFixed(2),
-              quantity: quantity,
-              image: image,
-            }),
-          ]}
-        >
-          Add to cart
-        </button>
+        <button onClick={handleClick}>Add to cart</button>
       </div>
     </div>
   );

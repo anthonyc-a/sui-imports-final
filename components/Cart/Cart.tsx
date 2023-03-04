@@ -63,22 +63,16 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
       <h1>
         Current <span>Order</span>
       </h1>
-      {cart.length > 0 ? (
-        <h5 className="heading">Order Breakdown</h5>
-      ) : (
-        "Cart is empty"
-      )}
+      {cart.length < 0 && "Cart is empty"}
       <ul>
         <>
           {cart.map((item: any, index: any) => (
             <li key={index}>
               <img src={item.image.fields.file.url} alt={"Item Image"} />
-              <div>
-                {item.name} (x {item.quantity})
-              </div>
-              <span>{item.maker}</span>
-
-              <div style={{ marginTop: "12px" }}>
+              <div className={styles.info}>
+                <div>
+                  {item.name} (x {item.quantity})
+                </div>
                 £{item.quantity * 6 * item.price}
               </div>
 

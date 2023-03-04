@@ -35,9 +35,10 @@ interface ItemProps {
 interface ItemsProps {
   items: ItemProps[];
   addToCart: any;
+  cart: any;
 }
 
-const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
+const Items: React.FC<ItemsProps> = ({ items, addToCart, cart }) => {
   const [showDetails, setShowDetails] = React.useState(false);
   const [selected, setSelected] = React.useState(0);
 
@@ -87,6 +88,7 @@ const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
                         price={selectedItem.fields.price}
                         details={setShowDetails}
                         addToCart={addToCart}
+                        cart={cart}
                         i={i}
                       />
 
@@ -271,7 +273,7 @@ const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
   );
 };
 
-const ItemsAll = (addToCart: any) => {
+const ItemsAll = ({ addToCart, cart }: any) => {
   const [items, setItems] = React.useState<ItemProps[]>([]);
 
   React.useEffect(() => {
@@ -285,7 +287,7 @@ const ItemsAll = (addToCart: any) => {
 
   return (
     <>
-      <Items items={items} addToCart={addToCart} />
+      <Items items={items} addToCart={addToCart} cart={cart} />
     </>
   );
 };
