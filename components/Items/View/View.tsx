@@ -18,6 +18,7 @@ interface ItemProps {
   awards: string;
   addToCart: any;
   type: string;
+  i: number;
 }
 
 const View: React.FC<ItemProps> = ({

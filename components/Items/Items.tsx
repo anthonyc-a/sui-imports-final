@@ -29,7 +29,6 @@ interface ItemProps {
     productDescription: string;
     winemaker: string;
     type: string;
-    i: number;
   };
 }
 
@@ -65,8 +64,7 @@ const Items: React.FC<ItemsProps> = ({ items, addToCart }) => {
                     image={item.fields.productImage}
                     price={item.fields.price}
                     maker={item.fields.winemaker}
-                    description={""}
-                    details={""}
+                    i={i}
                   />
                 </div>
                 {showDetails && (

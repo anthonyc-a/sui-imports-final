@@ -11,13 +11,12 @@ interface ItemProps {
       };
     };
   };
-  description: string;
-  details: any;
   price: number;
   maker: string;
+  i: number;
 }
 
-const Item: React.FC<ItemProps> = ({ name, image, price, maker }) => {
+const Item: React.FC<ItemProps> = ({ name, image, price }) => {
   return (
     <div className={styles.item}>
       <img src={image.fields.file.url} alt={name} />
