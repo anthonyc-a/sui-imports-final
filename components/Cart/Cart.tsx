@@ -27,7 +27,6 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
           }`
       )
       .join("\n");
-
     if (cart.length > 0) {
       emailjs
         .send(
@@ -35,11 +34,11 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
           "template_niyn4bz",
           {
             message: cartData,
-            first: firstNameRef.current && firstNameRef.current!.value,
-            last: lastNameRef.current && lastNameRef.current!.value,
-            company: companyRef.current && companyRef.current!.value,
-            email: emailRef.current && emailRef.current!.value,
-            number: numberRef.current && numberRef.current!.value,
+            first: firstNameRef.current?.value || "",
+            last: lastNameRef.current?.value || "",
+            company: companyRef.current?.value || "",
+            email: emailRef.current?.value || "",
+            number: numberRef.current?.value || "",
             total: orderTotal,
           },
           "6wX2WN7sKCF7DMK3x"
@@ -63,24 +62,28 @@ const Cart = ({ cart, setShowCart, removeFromCart }: any) => {
       <h1>
         Current <span>Order</span>
       </h1>
-      {cart.length < 0 && "Cart is empty"}
-      <ul>
-        <>
-          {cart.map((item: any, index: any) => (
-            <li key={index}>
-              <img src={item.image.fields.file.url} alt={"Item Image"} />
-              <div className={styles.info}>
-                <div>
-                  {item.name} (x {item.quantity})
+      {cart.length < 0 ? (
+        <div>Cart is empty</div>
+      ) : (
+        <ul>
+          <>
+            {cart.map((item: any, index: any) => (
+              <li key={index}>
+                <img src={item.image.fields.file.url} alt={"Item Image"} />
+                <div className={styles.info}>
+                  <div>
+                    {item.name} (x {item.quantity})
+                  </div>
+                  £{item.quantity * 6 * item.price}
                 </div>
-                £{item.quantity * 6 * item.price}
-              </div>
 
-              <button onClick={() => removeFromCart(index)}>Remove</button>
-            </li>
-          ))}
-        </>
-      </ul>
+                <button onClick={() => removeFromCart(index)}>Remove</button>
+              </li>
+            ))}
+          </>
+        </ul>
+      )}
+
       <form className={styles.form}>
         <input type="text" placeholder="First Name" ref={firstNameRef} />
         <input type="text" placeholder="Last Name" ref={lastNameRef} />
