@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import Cart from "../components/Cart/Cart";
 import VinesOne from "../components/common/Illustrations/VinesOne";
 import VinesTwo from "../components/common/Illustrations/VinesTwo";
-import Items from "../components/Items/Items";
+import ItemsAll from "../components/Items/Items";
 import Layout from "../components/Layout/Layout";
 
 import styles from "../styles/portfolio.module.css";
@@ -17,14 +18,21 @@ const Portfolio = () => {
   const [signedIn, setSignedIn] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
-  const [passRef, setPassRef] = useState("");
+  useEffect(() => {
+    if (showCart) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  }, [showCart]);
 
   const userRef = useRef();
   const passwordRef = useRef();
 
   const [cart, setCart] = useState<CartItem[]>([]);
+  console.log(cart);
 
-  const addToCart = (item: CartItem, e: any) => {
+  const addToCart = (item: CartItem) => {
     setCart([...cart, item]);
   };
 
@@ -38,11 +46,7 @@ const Portfolio = () => {
     } else null;
   };
 
-  useEffect(() => {
-    setPassRef(passwordRef.current);
-  }, [passwordRef]);
-
-  if (signedIn === true)
+  if (signedIn === true) {
     return (
       <div className="container">
         <Layout
@@ -54,14 +58,35 @@ const Portfolio = () => {
           <h1>
             Our <span>Selection</span>{" "}
           </h1>
+          <h3
+            className={styles.cartBtn}
+            onClick={() => {
+              setShowCart(true);
+            }}
+          >
+            Cart ({cart.length})
+          </h3>
+          <p>
+            Disclaimer: maximum amount of boxes of 6 bottles that can be on a
+            pallet is 100 boxes total. minimum order of 20 boxes per winemaker.
+          </p>
 
-          <Items addToCart={addToCart} removeFromCart={removeFromCart} />
+          <ItemsAll cart={cart} addToCart={addToCart} />
+          {showCart && (
+            <Cart
+              cart={cart}
+              setShowCart={setShowCart}
+              removeFromCart={removeFromCart}
+            />
+          )}
         </Layout>
         <VinesOne />
         <VinesTwo />
       </div>
     );
-  if (signedIn === false)
+  }
+
+  if (signedIn === false) {
     return (
       <div className="container">
         <Layout
@@ -79,12 +104,21 @@ const Portfolio = () => {
             <input type="password" placeholder="Password" ref={passwordRef} />
             <button onClick={handleSignIn}>Submit</button>
           </form>
-          <p>No sign in credentials? <strong><a href="mailto:hello@mail.com">Contact us</a></strong> if you wish to partner and order from our exclusive wine portolio. Our team will respond to your message and send you the login information</p>
+          <p className={styles.disclaimer}>
+            No sign in credentials?{" "}
+            <strong>
+              <a href="mailto:sui-wineimports@protonmail.com">Contact us</a>
+            </strong>{" "}
+            if you wish to partner and order from our exclusive wine portolio.
+            Our team will respond to your message and send you the login
+            information.
+          </p>
         </Layout>
         <VinesOne />
         <VinesTwo />
       </div>
     );
+  }
 };
 
 export default Portfolio;

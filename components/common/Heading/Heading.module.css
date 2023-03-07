@@ -11,8 +11,8 @@
   position: relative;
   margin: 0 auto;
   font-family: "Lora", sans-serif;
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .heading span::before,

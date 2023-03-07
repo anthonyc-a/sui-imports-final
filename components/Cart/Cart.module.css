@@ -1,0 +1,92 @@
+.cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 120px;
+  padding-bottom: 5rem;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.cart ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.info {
+}
+
+.cart ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.cart ul li button {
+  margin-top: 20px;
+}
+
+.cart h1 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 120px;
+  right: 2rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 320px;
+  max-width: 480px;
+  margin: 40px auto;
+}
+
+.inactive {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.form input {
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 1rem;
+  padding: 8px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #454545;
+  font-family: "Manrope", sans-serif;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #eee;
+  border-radius: unset;
+}
+
+.form h2 {
+  margin-top: 1rem;
+}
+
+.form button {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 1rem;
+}
+
+.cart ul li img {
+  max-height: 180px;
+}

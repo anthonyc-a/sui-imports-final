@@ -8,7 +8,6 @@ import VinesThree from "../common/Illustrations/VinesThree";
 
 import styles from "./Layout.module.css";
 import LoadingScreen from "../common/LoadingScreen/LoadingScreen";
-import Cart from "../common/Modals/Cart/Cart";
 
 type Props = {
   children: ReactNode;
@@ -50,50 +49,6 @@ const Layout = ({
       document.body.classList.remove("modal-open");
     }
   }, [menuOpen]);
-
-  useEffect(() => {
-    const handleTouchMove = (event: any) => {
-      event.preventDefault();
-    };
-
-    if (menuOpen) {
-      document.body.addEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    } else {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    }
-
-    return () => {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    };
-  }, [menuOpen]);
-
-  useEffect(() => {
-    const handleTouchMove = (event: any) => {
-      event.preventDefault();
-    };
-
-    if (contactOpen) {
-      document.body.addEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    } else {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    }
-
-    return () => {
-      document.body.removeEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    };
-  }, [contactOpen]);
 
   useEffect(() => {
     if (contactOpen) {
@@ -160,33 +115,15 @@ const Layout = ({
               </ul>
               {menuOpen && <VinesThree />}
             </nav>
-            <button
-              onClick={() => {
-                setMenuOpen(false);
-                setContactOpen(true);
-              }}
-            >
-              Contact
-            </button>
+            <a href="mailto:sui-wineimports@protonmail.com">
+              <button>Contact</button>
+            </a>
             {contactOpen && (
               <Contact
                 contactOpen={contactOpen}
                 setContactOpen={setContactOpen}
               />
             )}
-            {router.pathname === "/portfolio" && (
-              <div
-                className={styles.cartBtn}
-                onClick={() => {
-                  setShowCart(true);
-                }}
-              >
-                Cart ({cart.length})
-              </div>
-            )}
-
-            {showCart && <Cart />}
-
             <div
               className={styles.menuBtn}
               onClick={() => {
