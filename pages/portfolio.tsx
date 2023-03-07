@@ -66,6 +66,10 @@ const Portfolio = () => {
           >
             Cart ({cart.length})
           </h3>
+          <p>
+            Disclaimer: maximum amount of boxes of 6 bottles that can be on a
+            pallet is 100 boxes total. minimum order of 20 boxes per winemaker.
+          </p>
 
           <ItemsAll cart={cart} addToCart={addToCart} />
           {showCart && (
